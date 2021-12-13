@@ -1,0 +1,101 @@
+<html>
+    <body bgcolor=#FFFFFF>
+
+        <center>
+
+        <h1> 심장질환 예측하기 
+            <br><b style="font-size:60%">
+            당신의 생활습관은 심장질환자들과 얼마나 가까울까요?</b>
+            <br><b style="font-size:50%">
+            아래 내용을 채워서 나에게 심장 질환이 있을지 예측해 보세요! </b> 
+        </h1><br>
+        
+        <form method="POST", action="{{url_for('home')}}">
+            <table>                
+                <tr>
+                    <td align="left">성별(여자면 0, 남자면 1) : </td>
+                    <td align="left"><input type="text", name='a', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">나이 구간 : <br>
+                    (18~24 : 1, 25~30 : 2, 31~35 : 3, 36~40 : 4<br>
+                    41~45 : 5, 46~50 : 6, 51~55 : 7, 56~60 : 8<br>
+                    61~65 : 9, 66~70 : 10, 71~75 : 11, 76~80 : 12, 81세 이상 : 13) </td>
+                    <td align="left"><input type="text", name='b', placeholder="1~13"></td>
+                </tr>
+                <tr>
+                    <td align="left">고혈압(고혈압이 있으면 1) : </td>
+                    <td align="left"><input type="text", name='c', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">고 콜레스테롤(콜레스테롤이 높다는 말을 들었다면:1) : </td>
+                    <td align="left"><input type="text", name='d', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">콜레스테롤 검사(5년 내로 검사를 받은적이 있다면 1) : </td>
+                    <td align="left"><input type="text", name='e', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">BMI(측정된 BMI지수를 넣어주세요) : </td>
+                    <td align="left"><input type="text", name='f', placeholder="BMI"></td>
+                </tr>
+                <tr>
+                    <td align="left">흡연(살면서 최소 100개의 담배(5갑)를 피웠다면 1) : </td>
+                    <td align="left"><input type="text", name='g', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">뇌졸증(겪었다면 1) : </td>
+                    <td align="left"><input type="text", name='h', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">당뇨병(당뇨전단계면 1, 당뇨 진단을 받았다면 2) : </td>
+                    <td align="left"><input type="text", name='i', placeholder="0, 1 또는 2"></td>
+                </tr>
+                <tr>
+                    <td align="left">운동(지난 30일간 일 제외 신체활동을 한 적이 있으면 1) : </td>
+                    <td align="left"><input type="text", name='j', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">과일(하루에 1개 이상의 과일을 먹으면 1) : </td>
+                    <td align="left"><input type="text", name='k', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">채소(하루에 1개 이상의 야채를 먹으면 1) : </td>
+                    <td align="left"><input type="text", name='l', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">음주(남성은 주당 14잔, 여성은 7잔 이상 마시면 1) : </td>
+                    <td align="left"><input type="text", name='m', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">의료보험(있으면 1) : </td>
+                    <td align="left"><input type="text", name='n', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">의사 방문(지난 1년간 비용 걱정으로 의사를 방문하지 못한적이 있다면 1) : </td>
+                    <td align="left"><input type="text", name='o', placeholder="0 또는 1"></td>
+                </tr>
+                <tr>
+                    <td align="left">건강 자가 진단(스스로 얼마나 건강하다고 생각하는지(1~5 사이에서, 좋을수록 1, 나쁠수록 5)) : </td>
+                    <td align="left"><input type="text", name='p', placeholder="1~5"></td>
+                </tr>
+                <tr>
+                    <td align="left">정신 건강(지난 30일간 스트레스나 우울증 등 정신 건강이 나빴던 일 수는?) : </td>
+                    <td align="left"><input type="text", name='q', placeholder="0~30"></td>
+                </tr>
+                <tr>
+                    <td align="left">신체 건강(지난 30일간 병이나 부상 등 등 신체 건강이 나빴던 일 수는?) : </td>
+                    <td align="left"><input type="text", name='r', placeholder="0~30"></td>
+                </tr>
+                <tr>
+                    <td align="left">보행이나 계단을 오를 때 어려움이 있는지?(있으면 1) : </td>
+                    <td align="left"><input type="text", name='s', placeholder="0 또는 1"></td>
+                </tr>
+            </table>
+            <input type="submit" , value='predict!' >
+        </form>
+        
+    </center>
+
+    </body>
+</html>
